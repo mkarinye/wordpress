@@ -1,12 +1,23 @@
+ // src/App.js
+import React from 'react';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Register from './components/register';
+import Login from './components/login';
+import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-    <h1>This site is under development</h1>
-      </header>
-    </div>
+    <BrowserRouter>
+    
+      <Routes>
+       <Route path="/" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/login" element={<Login />} />
+      </Routes>
+      
+      
+    
+    </BrowserRouter>
   );
 }
 
